@@ -11,6 +11,7 @@ module.exports = (robot) ->
     backtrace = req.body.exception.backtrace.slice(0, 4).join("\n")
     message = """
     Execption: #{req.body.server} - #{req.body.exception.error_class}
+    PATH: #{JSON.stringify req.body.environment.PATH_INFO}
 
     -------------------------------
     Backtrace:
